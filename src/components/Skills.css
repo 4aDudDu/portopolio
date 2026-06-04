@@ -1,0 +1,91 @@
+.skills__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.skills__tab {
+  padding: 8px 18px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills__tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.skills__tab--active {
+  background: var(--primary-dim);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.skills__tab-num {
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+.skills__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill__item {
+  padding: 12px 0;
+}
+
+.skill__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill__name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.skill__level {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+
+.skill__bar {
+  height: 6px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill__bar-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(0,229,255,0.3);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .skills__tabs { gap: 6px; }
+  .skills__tab { padding: 6px 12px; font-size: 0.72rem; }
+}

@@ -1,0 +1,63 @@
+.leader__timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.leader__line {
+  position: absolute;
+  left: 15px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--secondary), var(--primary));
+  box-shadow: 0 0 6px rgba(124,58,237,0.3);
+}
+
+.leader__item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.leader__dot {
+  position: absolute;
+  left: -33px; top: 28px;
+  width: 28px; height: 28px;
+  background: var(--bg);
+  border: 2px solid var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--secondary);
+  z-index: 2;
+  box-shadow: 0 0 12px rgba(124,58,237,0.3);
+}
+
+.leader__card { padding: 24px; }
+
+.leader__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.leader__org {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.leader__period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 4px 0 12px;
+}
+
+.leader__desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}

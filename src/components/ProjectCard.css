@@ -1,0 +1,126 @@
+.project-card {
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(124,58,237,0.12), rgba(59,130,246,0.06));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card__placeholder {
+  background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(124,58,237,0.2), rgba(59,130,246,0.12));
+}
+
+.project-card__placeholder-icon {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  color: var(--primary);
+  opacity: 0.5;
+}
+
+.project-card__placeholder-cat {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.project-card__body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 10px 0 8px;
+  line-height: 1.3;
+}
+
+.project-card__desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.project-card__stack .tech-badge {
+  font-size: 0.68rem;
+  padding: 3px 10px;
+}
+
+.project-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.project-card__btn {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  background: var(--primary-dim);
+  border: 1px solid rgba(0,229,255,0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.project-card__btn:hover {
+  background: rgba(0,229,255,0.2);
+  box-shadow: 0 0 10px rgba(0,229,255,0.2);
+}
+
+.project-card__link {
+  width: 32px; height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.project-card__link:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
