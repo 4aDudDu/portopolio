@@ -74,7 +74,7 @@ export const experiences = [
   {
     title: "IT Staff / IT Support",
     company: "PT BPR Fianka Rezalina Fatma",
-    period: "Jan 2026 – Present",
+    period: "Jun 2026",
     description: "Responsible for developing IT servers, providing comprehensive IT support, maintaining network infrastructure, and ensuring operational stability for the bank.",
     stack: ["Server Administration", "IT Support", "Networking", "Hardware Maintenance"],
     current: false,
