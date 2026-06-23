@@ -77,7 +77,7 @@ export const experiences = [
     period: "Jan 2026 – Present",
     description: "Responsible for developing IT servers, providing comprehensive IT support, maintaining network infrastructure, and ensuring operational stability for the bank.",
     stack: ["Server Administration", "IT Support", "Networking", "Hardware Maintenance"],
-    current: true,
+    current: false,
   },
   {
     title: "Lead Developer & Modder",
