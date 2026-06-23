@@ -244,6 +244,11 @@
   text-align: center;
 }
 
+.admin-upload-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* Images grid */
 .admin-images__empty {
   font-size: 0.82rem;
@@ -304,10 +309,10 @@
 
 /* Toast */
 .admin-toast {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: sticky;
+  bottom: 16px;
+  margin: 0 auto;
+  width: fit-content;
   background: var(--card-solid);
   border: 1px solid var(--primary);
   border-radius: 8px;
@@ -317,9 +322,152 @@
   font-family: var(--font-mono);
   white-space: nowrap;
   box-shadow: 0 0 20px rgba(0,229,255,0.2);
+  z-index: 10;
 }
+.admin-toast--err { border-color: #ef4444; color: #ef4444; }
+.admin-toast--info { border-color: var(--secondary); color: var(--secondary); }
+
+/* Setup warning */
+.admin-setup-warn {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.admin-setup-warn svg { color: #ef4444; font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+.admin-setup-warn strong { display: block; color: #ef4444; margin-bottom: 4px; }
+.admin-setup-warn code { font-family: var(--font-mono); font-size: 0.72rem; background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 4px; }
+.admin-setup-warn a { color: var(--primary); }
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+.admin-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 4px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.admin-tab:hover { color: var(--text); }
+.admin-tab--active { color: var(--primary); border-bottom-color: var(--primary); }
+.admin-tab__badge {
+  background: var(--primary);
+  color: #000;
+  border-radius: 99px;
+  padding: 1px 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* Form */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.admin-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.admin-form__row--2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.admin-textarea {
+  resize: vertical;
+  min-height: 72px;
+  font-family: var(--font-body);
+}
+.admin-hint {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* My Projects */
+.admin-myprojects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.admin-project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+.admin-project-item:hover { border-color: rgba(0,229,255,0.2); }
+.admin-project-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.admin-project-item__info strong {
+  font-size: 0.85rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.admin-project-item__cat {
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  background: var(--primary-dim);
+  padding: 1px 7px;
+  border-radius: 99px;
+  width: fit-content;
+}
+.admin-project-item__role { font-size: 0.72rem; color: var(--text-secondary); }
+.admin-project-item__imgs { font-size: 0.68rem; color: var(--muted); }
+.admin-project-item__del {
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 6px;
+  color: #ef4444;
+  font-size: 0.7rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.admin-project-item__del:hover { background: rgba(239,68,68,0.2); }
+.admin-project-item__del:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Spin animation */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 0.8s linear infinite; }
 
 @media (max-width: 480px) {
   .admin-panel { width: 100vw; }
   .admin-images__grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-form__row--2col { grid-template-columns: 1fr; }
 }

@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { projects, projectCategories } from '../data/profileData';
-import { useProjectImages } from './AdminPanel';
+import { useState, useEffect } from 'react';
+import { projects as hardcodedProjects, projectCategories } from '../data/profileData';
+import { useProjectImages, useCustomProjects, useProjectLinks } from './AdminPanel';
 import SectionTitle from './SectionTitle';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
@@ -10,10 +10,20 @@ export default function Projects() {
   const [active, setActive] = useState('All');
   const [selected, setSelected] = useState(null);
   const projectImages = useProjectImages();
+  const customProjects = useCustomProjects();
+  const projectLinks = useProjectLinks();
+
+  const allProjects = [...hardcodedProjects, ...customProjects].map(p => {
+    const edits = projectLinks[String(p.id)];
+    if (edits) {
+      return { ...p, link: edits.link || p.link, github: edits.github || p.github };
+    }
+    return p;
+  });
 
   const filtered = active === 'All'
-    ? projects
-    : projects.filter(p => p.category === active || p.category.includes(active));
+    ? allProjects
+    : allProjects.filter(p => p.category === active || p.category.includes(active));
 
   return (
     <section id="projects" className="section">
@@ -30,7 +40,7 @@ export default function Projects() {
               {cat}
               {cat !== 'All' && (
                 <span className="projects__filter-count">
-                  {projects.filter(p => p.category === cat || p.category.includes(cat)).length}
+                  {allProjects.filter(p => p.category === cat || p.category.includes(cat)).length}
                 </span>
               )}
             </button>

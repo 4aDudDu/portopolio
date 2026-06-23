@@ -72,6 +72,14 @@ export const experiences = [
     current: true,
   },
   {
+    title: "IT Staff",
+    company: "Bank Fianka",
+    period: "Jan 2026 – Present",
+    description: "Responsible for developing IT servers, providing comprehensive IT support, maintaining network infrastructure, and ensuring operational stability for the bank.",
+    stack: ["Server Administration", "IT Support", "Networking", "Hardware Maintenance"],
+    current: true,
+  },
+  {
     title: "Lead Developer & Modder",
     company: "Bersama Kita Roleplay (FiveM/GTA V)",
     period: "Apr 2025 – Jan 2026",
