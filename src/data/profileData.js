@@ -35,6 +35,7 @@ export const profile = {
   ],
   social: {
     email: 'adriyanmahaputra009@gmail.com',
+    whatsapp: 'https://wa.me/6288270994639',
     linkedin: 'https://linkedin.com/in/adryan-maha-putra-9a0625222',
     github: 'https://github.com/4aDudDu',
   },
@@ -72,11 +73,12 @@ export const experiences = [
     current: true,
   },
   {
-    title: "IT Staff / IT Support",
-    company: "PT BPR Fianka Rezalina Fatma",
-    period: "Jun 2026",
-    description: "Responsible for developing IT servers, providing comprehensive IT support, maintaining network infrastructure, and ensuring operational stability for the bank.",
-    stack: ["Server Administration", "IT Support", "Networking", "Hardware Maintenance"],
+    title: "IT Support Intern",
+    company: "BPR Fianka Bank",
+    period: "Jun 2026 – Jul 2026",
+    website: "deposito.fiankabank.com",
+    description: "Developed and deployed the Deposito web application on the bank's subdomain (deposito.fiankabank.com) to support online deposit information and services. Performed maintenance and updates for the bank's web systems, ensuring website availability, functionality, and content accuracy. Managed daily updates of company data and digital content based on operational requirements. Provided IT infrastructure support by diagnosing and resolving hardware, software, and network-related issues within the office environment. Assisted in maintaining office IT equipment, user support, and ensuring stable day-to-day technology operations.",
+    stack: ["Web Development", "IT Support", "Hardware Maintenance", "Networking"],
     current: false,
   },
   {
@@ -588,6 +590,12 @@ export const leadership = [
     organization: "BEM FIK – Universitas Muhammadiyah Riau",
     period: "2025 – 2026",
     description: "Led digital communication, social media, multimedia content production, and digital strategy for faculty-level student activities.",
+  },
+  {
+    title: "IoT Class Mentor",
+    organization: "SKYLABYu",
+    period: "2025 – Present",
+    description: "Serve as IoT Class mentor at SKYLABYu, the campus peer sharing & mentoring community, teaching fellow students IoT fundamentals (ESP32, sensors, embedded systems).",
   },
   {
     title: "Student Council President",

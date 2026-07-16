@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
 import { profile } from '../data/profileData';
 import SectionTitle from './SectionTitle';
 import './Contact.css';
@@ -46,6 +46,13 @@ export default function Contact() {
                   <div>
                     <p className="contact__label">Email</p>
                     <a href={`mailto:${profile.social.email}`} className="contact__value">{profile.social.email}</a>
+                  </div>
+                </div>
+                <div className="contact__item">
+                  <FaWhatsapp className="contact__icon" />
+                  <div>
+                    <p className="contact__label">WhatsApp</p>
+                    <a href={profile.social.whatsapp} target="_blank" rel="noopener noreferrer" className="contact__value">+62 882-7099-4639</a>
                   </div>
                 </div>
                 <div className="contact__item">

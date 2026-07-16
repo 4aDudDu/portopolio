@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaDownload, FaEnvelope, FaLinkedin, FaGithub, FaChevronRight } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaDownload, FaEnvelope, FaLinkedin, FaGithub, FaChevronRight, FaWhatsapp } from 'react-icons/fa';
 import { profile } from '../data/profileData';
 import './Hero.css';
 
@@ -73,6 +73,9 @@ export default function Hero() {
           <div className="hero__social">
             <a href={`mailto:${profile.social.email}`} className="hero__social-link" aria-label="Email">
               <FaEnvelope />
+            </a>
+            <a href={profile.social.whatsapp} target="_blank" rel="noopener noreferrer" className="hero__social-link" aria-label="WhatsApp">
+              <FaWhatsapp />
             </a>
             <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="hero__social-link" aria-label="LinkedIn">
               <FaLinkedin />

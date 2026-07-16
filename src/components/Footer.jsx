@@ -1,4 +1,4 @@
-import { FaHeart, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaHeart, FaEnvelope, FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { profile } from '../data/profileData';
 import './Footer.css';
 
@@ -17,6 +17,7 @@ export default function Footer() {
 
         <div className="footer__social">
           <a href={`mailto:${profile.social.email}`} className="footer__link" aria-label="Email"><FaEnvelope /></a>
+          <a href={profile.social.whatsapp} target="_blank" rel="noopener noreferrer" className="footer__link" aria-label="WhatsApp"><FaWhatsapp /></a>
           <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="footer__link" aria-label="LinkedIn"><FaLinkedin /></a>
           <a href={profile.social.github} target="_blank" rel="noopener noreferrer" className="footer__link" aria-label="GitHub"><FaGithub /></a>
         </div>
